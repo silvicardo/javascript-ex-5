@@ -12,7 +12,7 @@ nell’ordine: nome, cognome e età.
 
 
 // PARTE 1
-document.writeln('-Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome e età. Stampare a schermo attraverso il for in tutte le proprietà.<br>') ;
+document.writeln('-Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome e età. Stampare a schermo attraverso il for in tutte le proprietà.<br>');
 
 
 var studente = {
@@ -74,7 +74,7 @@ function creaNuovoOggettoStudente() {
   };
 
   for(var key in nuovoStudente) {
-    nuovoStudente[key] = prompt('Inserisci ' + key);
+    nuovoStudente[key] = (typeof(nuovoStudente[key]) === 'number') ? parseInt(prompt('Inserisci ' + key))  : prompt('Inserisci ' + key) ;
   }
 
 return nuovoStudente;
